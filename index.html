@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahamet Koné — Motion Designer & Animator</title>
+    <meta name="description" content="Portfolio de Mahamet Koné — Animateur 2D/3D, Motion Designer, Graphiste et Réalisateur de films d'animation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo" id="preloader-logo">MAHAMET KONÉ</div>
+        <div class="preloader-bar"><div class="preloader-progress" id="preloader-progress"></div></div>
+        <div class="preloader-percent" id="preloader-percent">0%</div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo" onclick="showPage('home'); return false;">MK.</a>
+        <button class="nav-menu-btn" id="menu-btn" aria-label="Menu" onclick="toggleMenu()">
+            <span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <div class="menu-links">
+            <a href="#" class="menu-link" onclick="showPage('home'); toggleMenu(); return false;"><span class="num">01</span>Accueil</a>
+            <a href="#about" class="menu-link" onclick="scrollToSection('about'); toggleMenu(); return false;"><span class="num">02</span>À propos</a>
+            <a href="#skills" class="menu-link" onclick="scrollToSection('skills'); toggleMenu(); return false;"><span class="num">03</span>Compétences</a>
+            <a href="#software" class="menu-link" onclick="scrollToSection('software'); toggleMenu(); return false;"><span class="num">04</span>Logiciels</a>
+            <a href="#experience" class="menu-link" onclick="scrollToSection('experience'); toggleMenu(); return false;"><span class="num">05</span>Expériences</a>
+            <a href="#projects" class="menu-link" onclick="scrollToSection('projects'); toggleMenu(); return false;"><span class="num">06</span>Projets</a>
+            <a href="#bilichi" class="menu-link" onclick="scrollToSection('bilichi'); toggleMenu(); return false;"><span class="num">07</span>Bilichi</a>
+            <a href="#gallery" class="menu-link" onclick="scrollToSection('gallery'); toggleMenu(); return false;"><span class="num">08</span>Galerie</a>
+            <a href="#distinctions" class="menu-link" onclick="scrollToSection('distinctions'); toggleMenu(); return false;"><span class="num">09</span>Distinctions</a>
+            <a href="#contact" class="menu-link" onclick="scrollToSection('contact'); toggleMenu(); return false;"><span class="num">10</span>Contact</a>
+        </div>
+    </div>
+
+    <!-- PAGE HOME -->
+    <div id="page-home">
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-text">MOTION DESIGNER • ANIMATOR • FILMMAKER • </div>
+            <div class="hero-image img-reveal">
+                <img src="image/Ma photo 2.jpg" alt="Mahamet Koné">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-name" id="hero-name">MAHAMET KONÉ</h1>
+                <div class="hero-roles">
+                    <div class="hero-roles-inner">
+                        <div class="hero-role">Motion Designer</div>
+                        <div class="hero-role">3D Artist</div>
+                        <div class="hero-role">2D Animator</div>
+                        <div class="hero-role">Graphic Designer</div>
+                        <div class="hero-role">Filmmaker</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll" onclick="scrollToSection('about')">
+                <span class="hero-scroll-text">Scroll</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">01 — Qui suis-je</span>
+                    <h2 class="section-title" id="about-title">À PROPOS</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-portrait img-reveal">
+                        <img src="image/Ma photo.jpg" alt="Portrait" class="parallax-img">
+                    </div>
+                    <div class="about-text">
+                        <div class="about-bio" id="about-bio">
+                            <p>Né à Bamako en 1996, je suis animateur 2D/3D et directeur artistique. Très tôt, j'ai manifesté un goût pour l’expérimentation en démontant des appareils pour en comprendre le fonctionnement.</p>
+                            <p>De 2017 à 2018, j'ai suivi un Brevet de Technicien en électromécanique industrielle (BT2). Avec mes camarades, je fréquentais régulièrement les cybercafés pour naviguer sur internet et approfondir mes connaissances en électronique. C’est là que j'ai découvert les circuits imprimés, le design 3D et les maquettes virtuelles, ce qui a éveillé mon intérêt pour la création numérique.</p>
+                            <p>En 2019, j'ai acheté mon premier ordinateur avec l’aide de mon père et j'ai commencé à m’autoformer sur Blender. Mes premières modélisations ont attiré l’attention de mon frère, qui m’a orienté vers Vortex Group, une entreprise de production audiovisuelle. J'y ai effectué un stage et j'y ai développé mes compétences en motion design et en animation.</p>
+                            <p>Sur les conseils de mes encadrants, j'ai passé le concours d’entrée au Conservatoire des Arts et Métiers Multimédia Balla Fasséké Kouyaté, en section Multimédia. J'y ai été admis en me classant deuxième au concours, et j'en suis sorti diplômé en 2023. Durant mes études, j'ai affiné mon langage visuel et narratif. En parallèle, j'ai réalisé des travaux en freelance, dont l’illustration de la bande dessinée Boukadary (2022, pour Korê).</p>
+                            <p>Lors de mon stage de fin d’études à DFA Communication, j'ai collaboré avec des directeurs artistiques et un illustrateur de bande dessinée étranger, ce qui m’a permis de découvrir d’autres approches des arts visuels. J'y ai participé à la conception d’identités visuelles, à des campagnes publicitaires (dont Famille Douman pour Orange Mali) et à la communication graphique de l’entreprise.</p>
+                            <p>Dans le cadre de ma soutenance, c’est au Conservatoire que j'ai développé le projet qui a marqué mon entrée dans le monde du cinéma : Bilichi (2022-2023), un film d’animation inspiré d’une légende bambara. J'ai choisi d’en proposer une relecture critique autour des inégalités sociales véhiculées par les différentes versions de l’histoire. Bilichi a connu un parcours international remarquable : des sélections au FESPACO (Burkina Faso), au Festival Vues d’Afrique (Montréal), au FFAA (Côte d’Ivoire), au First-Time Filmmaker Sessions (Royaume-Uni), au Festival Itinérant du Film d’École de Mboro (Sénégal), à LIFANIMA (Nigeria), ainsi qu'une mention honorable au Student World Impact Film Festival (États-Unis).</p>
+                            <p>Après l’obtention de mon diplôme en 2023, j'ai été recruté par Vortex Group comme animateur 2D/3D et directeur artistique. J'ai collaboré sur plusieurs projets : Rêve de Fanta de Gaoussou Tangara (animateur), I Bô Yôrô d’Abraham Kamara (illustrateur et animateur), Kondekiè de Kadidiatou Konaké (illustrateur, animateur et directeur artistique), et la série Dambela de Vortex Group et du Ministère de la Culture du Mali (directeur artistique et animateur).</p>
+                            <p>En parallèle, je me suis associé avec Kadidiatou Konaké pour co-réaliser le court-métrage d'animation Nana à l’occasion de la Saint-Valentin, puis le livre illustré La légende de Mômô Traoré.</p>
+                            <p>À travers mes projets, je cherche à susciter des émotions, à provoquer des questionnements et à lever le voile sur les tabous de notre société. Pour moi, l'animation est un moyen puissant de mettre en lumière ce que l'on préfère cacher, afin de libérer la parole et d'initier le dialogue.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card"><div class="stat-number" data-target="5">0</div><div class="stat-label">Années d'expérience</div></div>
+                            <div class="stat-card"><div class="stat-number" data-target="214">0</div><div class="stat-label">Projets réalisés</div></div>
+                            <div class="stat-card"><div class="stat-number" data-target="2">0</div><div class="stat-label">Films réalisés</div></div>
+                            <div class="stat-card"><div class="stat-number" data-target="2">0</div><div class="stat-label">Formations dispensées</div></div>
+                            <div class="stat-card"><div class="stat-number" data-target="12">0</div><div class="stat-label">Festivals sélectionnés</div></div>
+                            <div class="stat-card"><div class="stat-number" data-target="1">0</div><div class="stat-label">Récompenses</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">02 — Expertise</span>
+                    <h2 class="section-title" id="skills-title">COMPÉTENCES</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">🎬</div>
+                        <div class="skill-name">Animation 2D</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Animation traditionnelle, motion graphics, explainer videos</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                        <div class="skill-percent">80%</div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">🎨</div>
+                        <div class="skill-name">Animation 3D</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Modélisation, rigging, animation, rendering</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="87"></div></div>
+                        <div class="skill-percent">87%</div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">✨</div>
+                        <div class="skill-name">Motion Design</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Typographie animée, VFX, compositing</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+                        <div class="skill-percent">92%</div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">🎭</div>
+                        <div class="skill-name">Direction Artistique</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Identité visuelle, branding, design system</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+                        <div class="skill-percent">88%</div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">🎥</div>
+                        <div class="skill-name">Réalisation</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Films d'animation, courts-métrages, documentaires</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+                        <div class="skill-percent">75%</div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">🖌️</div>
+                        <div class="skill-name">Graphisme</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Illustration, affiches, mise en page</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+                        <div class="skill-percent">90%</div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">🎓</div>
+                        <div class="skill-name">Formateur</div>
+                        <p style="color:var(--gray-light);font-size:0.9rem">Formation en animation et motion design</p>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="50"></div></div>
+                        <div class="skill-percent">50%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOFTWARE -->
+        <section class="section software" id="software">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">03 — Outils</span>
+                    <h2 class="section-title" id="software-title">LOGICIELS</h2>
+                </div>
+                <div class="software-grid">
+                    <div class="software-item"><div class="software-icon">Ae</div><span class="software-name">After Effects</span></div>
+                    <div class="software-item"><div class="software-icon">Pr</div><span class="software-name">Premiere Pro</span></div>
+                    <div class="software-item"><div class="software-icon">Ps</div><span class="software-name">Photoshop</span></div>
+                    <div class="software-item"><div class="software-icon">Ai</div><span class="software-name">Illustrator</span></div>
+                    <div class="software-item"><div class="software-icon">Bl</div><span class="software-name">Blender</span></div>
+                    <div class="software-item"><div class="software-icon">C4D</div><span class="software-name">Cinema 4D</span></div>
+                    <div class="software-item"><div class="software-icon">CSP</div><span class="software-name">Clip Studio Paint</span></div>
+                    <div class="software-item"><div class="software-icon">TB</div><span class="software-name">Toon Boom</span></div>
+                    <div class="software-item"><div class="software-icon">TVP</div><span class="software-name">TVPaint</span></div>
+                    <div class="software-item"><div class="software-icon">Id</div><span class="software-name">InDesign</span></div>
+                    <div class="software-item"><div class="software-icon">DR</div><span class="software-name">DaVinci</span></div>
+                    <div class="software-item"><div class="software-icon">UE</div><span class="software-name">Unreal</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">04 — Parcours</span>
+                    <h2 class="section-title" id="experience-title">EXPÉRIENCES</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 — Présent</div>
+                        <div class="timeline-title">Directeur artistique</div>
+                        <div class="timeline-company">VortexGroup</div>
+                        <div class="timeline-desc">Direction artistique et créative d'un studio spécialisé dans les documentaires, fictions, animation et motion design. Supervision de projets pour des clients.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 — 2023</div>
+                        <div class="timeline-title">Graphiste & Motion Designer</div>
+                        <div class="timeline-company">DFA Communication</div>
+                        <div class="timeline-desc">Conception et réalisation de campagnes motion design pour des marques.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 — 2021</div>
+                        <div class="timeline-title">Animateur 2D/3D Senior</div>
+                        <div class="timeline-company">VortexGroups</div>
+                        <div class="timeline-desc">Animation de séries télévisées et de courts-métrages. Collaboration étroite avec les réalisateurs et les storyboardeurs.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-title">Graphiste & Motion Designer</div>
+                        <div class="timeline-company">VortexGroups</div>
+                        <div class="timeline-desc">Création d'identités visuelles, de supports print et de contenus animés pour les réseaux sociaux.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section projects" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">05 — Portfolio</span>
+                    <h2 class="section-title" id="projects-title">PROJETS</h2>
+                </div>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">Tous</button>
+                    <button class="filter-btn" data-filter="animation" onclick="filterProjects('animation')">Animation 2D</button>
+                    <button class="filter-btn" data-filter="motion" onclick="filterProjects('motion')">Motion Design</button>
+                    <button class="filter-btn" data-filter="film" onclick="filterProjects('film')">Spots et Films</button>
+                    <button class="filter-btn" data-filter="3d" onclick="filterProjects('3d')">3D</button>
+                </div>
+                <div class="projects-masonry" id="projects-masonry"></div>
+            </div>
+        </section>
+
+        <!-- BILICHI -->
+        <section class="section" id="bilichi">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">06 — Projet phare</span>
+                    <h2 class="section-title" id="bilichi-title">BILICHI</h2>
+                </div>
+                <div class="bilichi-hero">
+                    <img src="image/billichi/poster 2.png" alt="Bilichi Affiche">
+                    <div class="bilichi-hero-overlay"></div>
+                    <div class="bilichi-hero-content">
+                        <h2 class="bilichi-hero-title">BILICHI</h2>
+                        <p class="bilichi-hero-subtitle">Film d'animation • 2023</p>
+                    </div>
+                </div>
+                <div class="bilichi-info">
+                    <div class="bilichi-info-block">
+                        <h3>Synopsis</h3>
+                        <p>Suite au meurtre de son père, Bakary est influencé par le roi pour venger la mort de celui-ci. Il s’en prend alors à Bilichi, l’intrépide guerrier craint et rejeté de tous.</p>
+                        <h3>------</h3>
+                        <h3>Bilichi</h3>
+                        <p> ​Court-métrage d'animation (Projet de fin d'études) À la base pensé comme une série, ce court-métrage pose les bases d'un univers plus vaste, inspiré de l’épopée bambara « Bilichi et Bakary ».</p>
+                    </div>
+                    <div class="bilichi-info-block">
+                        <h3>Informations</h3>
+                        <ul>
+                            <li>Durée : 05 minutes</li>
+                            <li>Technique : 2D/3D hybride</li>
+                            <li>Langue : Bambara / Sous-titres multilingues</li>
+                            <li>Production : VORTEXGROUPS-SARL</li>
+                            <li>Année : 2023</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bilichi-grid">
+                    <div class="bilichi-item">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/billichi/making of Billichi.mp4">
+                        </video>
+                        <span class="bilichi-item-label">Making-of</span>
+                    </div>
+                    <div class="bilichi-item">
+                        <video controls loop>
+                            <source src="image/billichi/Billichi Trailer.mp4">
+                        </video>
+                        <span class="bilichi-item-label">Trailer</span>
+                    </div>
+                </div>
+                <div class="section-header" style="margin-top:4rem;margin-bottom:2rem">
+                    <span class="section-label">Sélections & Récompenses</span>
+                    <h3 style="font-family:var(--font-subtitle);font-size:1.5rem">PALMARÈS</h3>
+                </div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-icon">🏆</div>
+                        <div class="award-name">Mention Honorable</div>
+                        <div class="award-detail">Student World Impact Film Festival</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">🌟</div>
+                        <div class="award-name">Sélection Officielle</div>
+                        <div class="award-detail">Africa JARC 2026</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">🌟</div>
+                        <div class="award-name">Selection Officielle </div>
+                        <div class="award-detail">FESPACO 2025</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">🌟</div>
+                        <div class="award-name">Mention Spéciale du Jury</div>
+                        <div class="award-detail">LIFANIMA 2023</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="section gallery" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">07 — Créations</span>
+                    <h2 class="section-title" id="gallery-title">GALERIE</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item gallery-item--wide">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/galerie/Mars colony first contact.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Mars Colony</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--wide">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/galerie/cest après avoir découvert là 3den 8 moi de formation autodidacte.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Découverte autodidacte</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <img src="image/concept/Ai.jpg" alt="Work 1">
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">l'esquisseur</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/concept/qsd-01.jpg" alt="Work 2">
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Fluid Forms</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/galerie/exo2.jpg" alt="Exo 2 Artwork">
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Exo 2</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/galerie/vg.jpg" alt="VG Portrait">
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">VG Portrait</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/galerie/Bonne fête à larmée malienne.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Bonne fête à l’armée malienne 2019</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/concept/wave 2.mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Wave</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <img src="image/galerie/exo.jpg" alt="Exo Artwork">
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Exo 1</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <img src="image/galerie/model vivant.jpg" alt="Model Vivant">
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Model Vivant</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/galerie/A la recherche dinspiration.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">À la recherche d’inspiration</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/galerie/firt.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Momo Traoré virgule</span></div>
+                    </div>
+                    <div class="gallery-item gallery-item--tall">
+                        <video autoplay loop muted playsinline>
+                            <source src="image/galerie/kanaga.mp4" type="video/mp4">
+                        </video>
+                        <div class="gallery-item-overlay"><span class="gallery-item-title">Kanaga</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISTINCTIONS -->
+        <section class="section" id="distinctions">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">08 — Reconnaissance</span>
+                    <h2 class="section-title" id="distinctions-title">DISTINCTIONS</h2>
+                </div>
+                <div class="distinctions-timeline">
+                    <div class="distinction-item">
+                        <div class="distinction-year">2025</div>
+                        <div class="distinction-content">
+                            <div class="distinction-title">FESPACO</div>
+                            <div class="distinction-detail">FESPACO — Festival Panafricain du Cinéma et de la Télévision de Ouagadougou</div>
+                            <span class="distinction-badge">Sélection officielle</span>
+                        </div>
+                    </div>
+                    <div class="distinction-item">
+                        <div class="distinction-year">2025</div>
+                        <div class="distinction-content">
+                            <div class="distinction-title">Festival Vues d’Afrique</div>
+                            <div class="distinction-detail">Sélection officielle</div>
+                            <span class="distinction-badge">Sélection officielle</span>
+                        </div>
+                    </div>
+                    <div class="distinction-item">
+                        <div class="distinction-year">2023</div>
+                        <div class="distinction-content">
+                            <div class="distinction-title">LIFANIMA</div>
+                            <div class="distinction-detail">Sélection officielle</div>
+                            <span class="distinction-badge">Sélection officielle</span>
+                        </div>
+                    </div>
+                    <div class="distinction-item">
+                        <div class="distinction-year">2024</div>
+                        <div class="distinction-content">
+                            <div class="distinction-title">Festival Itinérant du Film d’École de Mboro</div>
+                            <div class="distinction-detail">Sélection officielle</div>
+                            <span class="distinction-badge">Sélection officielle</span>
+                        </div>
+                    </div>
+                    <div class="distinction-item">
+                        <div class="distinction-year">2023</div>
+                        <div class="distinction-content">
+                            <div class="distinction-title">Student World Impact Film Festival</div>
+                            <div class="distinction-detail">Mention honorable</div>
+                            <span class="distinction-badge">Mention honorable</span>
+                        </div>
+                    </div>
+                    <div class="distinction-item">
+                        <div class="distinction-year">2026</div>
+                        <div class="distinction-content">
+                            <div class="distinction-title">AFRICAJARC</div>
+                            <div class="distinction-detail">Sélection officielle</div>
+                            <span class="distinction-badge">Sélection officielle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">09 — Collaboration</span>
+                    <h2 class="section-title" id="contact-title">CONTACT</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-photo">
+                            <img src="image/Ma photo.jpg" alt="Mahamet Koné">
+                        </div>
+                        <div class="contact-links">
+                            <a href="mailto:mahametkone@gmail.com" class="contact-link">
+                                <div class="contact-link-icon">✉</div>
+                                <span>mahametkone@gmail.com</span>
+                            </a>
+                            <a href="tel:+22372467508" class="contact-link">
+                                <div class="contact-link-icon">☎</div>
+                                <span>+223 72 46 75 08</span>
+                            </a>
+                            <a href="#" class="contact-link">
+                                <div class="contact-link-icon">in</div>
+                                <span>LinkedIn /mahametkone</span>
+                            </a>
+                            <a href="#" class="contact-link">
+                                <div class="contact-link-icon">Be</div>
+                                <span>Behance /mahametkone</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-submit').textContent='Message envoyé !'; setTimeout(()=>this.querySelector('.form-submit').textContent='Envoyer le message', 3000);">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Sujet">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p class="footer-text">© 2024 MAHAMET KONÉ — Fait avec <span class="footer-heart">♥</span> et beaucoup de pixels</p>
+        </footer>
+    </div>
+
+    <!-- VIDEO PLAYER OVERLAY -->
+    <div id="video-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:200;align-items:center;justify-content:center;padding:20px;" onclick="closeVideoPlayer()">
+        <button style="position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);cursor:pointer;z-index:10;" onclick="event.stopPropagation();closeVideoPlayer()">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div style="width:100%;max-width:1000px;" onclick="event.stopPropagation()">
+            <h3 id="video-title" style="font-family:var(--font-subtitle);font-size:1.25rem;color:var(--white);margin-bottom:16px;"></h3>
+            <video id="video-player" controls style="width:100%;border-radius:16px;max-height:80vh;" autoplay>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/three-scene.js"></script>
+</body>
+</html>
